@@ -1,0 +1,9 @@
+from pyspark.sql import SparkSession
+spark = SparkSession.builder.appName("Colab-PySpark").getOrCreate()
+
+
+file_path = '/content/sampletextfile.txt'
+
+rdd1 = spark.sparkContext.textFile(file_path)
+
+rdd1.collect()

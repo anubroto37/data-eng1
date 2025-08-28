@@ -1,0 +1,4 @@
+Welcome to Hadoop
+Welcome to Spark
+Welcome to Big Data
+Learning Hadoop and Spark is fun
