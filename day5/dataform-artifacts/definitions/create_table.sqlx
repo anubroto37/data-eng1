@@ -1,0 +1,26 @@
+config { 
+    type: "operations" 
+    }
+
+CREATE SCHEMA IF NOT EXISTS `pp-bigquery-02.demo_dataset_dataform`;
+
+
+CREATE TABLE IF NOT EXISTS `pp-bigquery-02.demo_dataset_dataform.demo_table` (
+    user_id INTEGER OPTIONS(description="Unique identifier for the user"),
+    user_first_name STRING OPTIONS(description="First name of the user"),
+    user_last_name STRING OPTIONS(description="Last name of the user"),
+    is_active BOOLEAN OPTIONS(description="Indicates whether the user is active") 
+);
+
+
+INSERT INTO `pp-bigquery-02.demo_dataset_dataform.demo_table` (user_id, user_first_name, user_last_name, is_active) VALUES 
+(1, 'John', 'Doe', TRUE),
+(2, 'Priya', 'Kumar', NULL),
+(3, 'Rohan', 'Gupta', TRUE),
+(4, 'Lakshmi', 'Patel', FALSE),
+(5, 'Arjun', 'Singh', TRUE),
+(6, 'Sara', 'Sharma', NULL),
+(7, 'Vivek', 'Mehta', TRUE),
+(8, 'Anita', 'Desai', FALSE),
+(9, 'Dev', 'Mishra', TRUE),
+(10, 'Kiran', 'Bose', TRUE);
